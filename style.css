@@ -10,6 +10,14 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Colors */
+:root {
+  --primary-color: #1e3c72;       /* Deep Blue */
+  --secondary-color: #2a5298;     /* Medium Blue */
+  --highlight-color: #ffb347;     /* Orange for CTA */
+  --text-light: #fff;
+}
+
 /* Navbar */
 nav {
   position: fixed;
@@ -25,27 +33,27 @@ nav {
 }
 
 nav.scrolled {
-  background: linear-gradient(90deg, #1e3c72, #2a5298);
-  color: #fff;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-light);
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 nav .logo {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-light);
 }
 
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-light);
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 nav a:hover {
-  color: #ffb347;
+  color: var(--highlight-color);
   transform: scale(1.05);
 }
 
@@ -57,7 +65,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
+  color: var(--text-light);
 }
 
 .hero-content h1 { font-size: 3rem; margin-bottom: 15px; }
@@ -66,21 +74,22 @@ nav a:hover {
   padding: 12px 25px;
   border: none;
   border-radius: 25px;
-  background: #ffb347;
+  background: var(--highlight-color);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .hero-content button:hover {
-  background: #fff;
-  color: #1e3c72;
+  background: var(--text-light);
+  color: var(--primary-color);
+  transform: scale(1.05);
 }
 
 /* About Section */
 #about {
   padding: 80px 20px;
-  background: #1e3c72;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--text-light);
 }
 .about-container {
   display: flex;
@@ -97,8 +106,8 @@ nav a:hover {
 /* Services Section */
 #services {
   padding: 80px 20px;
-  background: #2a5298;
-  color: #fff;
+  background: var(--secondary-color);
+  color: var(--text-light);
   text-align: center;
 }
 .services-container {
@@ -115,13 +124,16 @@ nav a:hover {
   width: 250px;
   transition: all 0.3s ease;
 }
-.service-card:hover { transform: translateY(-10px); }
+.service-card:hover { 
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.2);
+}
 
 /* Contact Section */
 #contact {
   padding: 80px 20px;
   background: #111;
-  color: #fff;
+  color: var(--text-light);
   text-align: center;
 }
 .contact-form {
@@ -142,12 +154,16 @@ nav a:hover {
   padding: 12px;
   border-radius: 25px;
   border: none;
-  background: #ffb347;
+  background: var(--highlight-color);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.contact-form button:hover { background: #fff; color: #1e3c72; }
+.contact-form button:hover { 
+  background: var(--text-light);
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
 
 /* Responsive */
 @media (max-width: 768px) {
