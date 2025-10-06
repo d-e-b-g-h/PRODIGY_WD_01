@@ -1,0 +1,79 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: background 0.4s, box-shadow 0.4s;
+  z-index: 1000;
+}
+
+nav.scrolled {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+/* Section Styling */
+.section {
+  height: 100vh;
+  padding: 120px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-section {
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  color: #fff;
+}
+
+.section:nth-child(odd):not(.home-section) {
+  background: #f8f9fa;
+}
+
+.section:nth-child(even) {
+  background: #e9ecef;
+}
